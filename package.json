@@ -11,9 +11,10 @@
     "preview": "npm run pages:build && wrangler pages dev",
     "deploy": "npm run pages:build && wrangler pages deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
-    "drizzle:generate": "drizzle-kit generate",
-    "drizzle:migrate": "drizzle-kit migrate",
-    "drizzle:dev": "drizzle-kit studio"
+    "drizzle:generate": "drizzle-kit generate:pg --schema=./schemas/drizzle.ts",
+    "drizzle:migrate": "drizzle-kit migrate --schema=./schemas/drizzle.ts --out=./migrations",
+    "drizzle:push": "drizzle-kit push:pg --schema=./schemas/drizzle.ts",
+    "drizzle:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "drizzle-kit": "^0.26.2",
