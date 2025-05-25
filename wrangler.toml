@@ -14,5 +14,5 @@ pages_build_output_dir = ".vercel/output/static"
 [[d1_databases]]
 binding = "DB"
 database_name = "baladera-db"
-database_id = "d3e238c32a49959537c81528de032a8d"
+database_id = "0f82e228-75fa-4833-8e71-236c1f0035f2"
 migrations_dir = ".drizzle-out"
